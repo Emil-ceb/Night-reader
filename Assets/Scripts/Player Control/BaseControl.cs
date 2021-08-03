@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class BaseControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    protected Vector2 direction=Vector2.zero;
+
+    protected bool directionForward;
+    
+    [SerializeField]
+    protected float velocidadMovimiento;
+    Animator animPlayer;
+
+
+    void Awake() 
     {
-        
+        animPlayer=GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void ControlPersonaje()
     {
-        
+        this.transform.Translate(direction.normalized*velocidadMovimiento*Time.deltaTime);
     }
 }
