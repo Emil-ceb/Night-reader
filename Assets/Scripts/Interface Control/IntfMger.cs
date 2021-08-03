@@ -7,11 +7,11 @@ public class IntfMger : MonoBehaviour
 {
     public Text[] textIntrfc;
 
-    PlayerConstruct pC;
+    NumConst nC;
 
     void Start() 
     {
-        pC=GetComponent<PlayerConstruct>();
+        nC=GetComponent<NumConst>();
         AsignValueArray();
     }
 
@@ -19,7 +19,7 @@ public class IntfMger : MonoBehaviour
     {
         for (int i = 0; i < textIntrfc.Length; i++)
         {
-            textIntrfc[i].text=pC.numbers[i].ToString();
+            textIntrfc[i].text=nC.numbers[i].ToString();
         }
     }
 }
