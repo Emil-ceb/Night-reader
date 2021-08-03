@@ -390,6 +390,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 313595410, guid: 2167e21c7da1f214b944200febdc0868, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895120477, guid: 2167e21c7da1f214b944200febdc0868, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8135696332380032697, guid: 2167e21c7da1f214b944200febdc0868,
         type: 3}
       propertyPath: m_Name
@@ -408,7 +416,7 @@ PrefabInstance:
     - target: {fileID: 8135696332380032698, guid: 2167e21c7da1f214b944200febdc0868,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.72
+      value: -1.661
       objectReference: {fileID: 0}
     - target: {fileID: 8135696332380032698, guid: 2167e21c7da1f214b944200febdc0868,
         type: 3}
@@ -752,6 +760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455792921761786099, guid: 2128b8b36db5c524c82592e7f29f978e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6510249063761800609, guid: 2128b8b36db5c524c82592e7f29f978e,
         type: 3}
