@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         cooldownTimer = 0;
         
         //un object pooling se usa para multiples objetos 
-        energy[FindEnergy()].transform.position = energyPoint.position;
+        //energy[FindEnergy()].transform.position = energyPoint.position;
         energy[FindEnergy()].GetComponent<Proyectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 

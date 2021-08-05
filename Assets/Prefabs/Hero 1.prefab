@@ -15,13 +15,15 @@ GameObject:
   - component: {fileID: 313595409}
   - component: {fileID: 1895120477}
   - component: {fileID: 1396437864}
+  - component: {fileID: 9126956679933780292}
+  - component: {fileID: 928186491}
   m_Layer: 0
   m_Name: Hero 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8135696332380032698
 Transform:
   m_ObjectHideFlags: 0
@@ -188,3 +190,31 @@ MonoBehaviour:
   attackCooldown: 0
   energyPoint: {fileID: 0}
   energy: []
+--- !u!114 &9126956679933780292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135696332380032697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3faa1f6dc705af4a939a8a1aeb068fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0
+  energyPoint: {fileID: 0}
+  energy: []
+--- !u!114 &928186491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135696332380032697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907b20d13e1ecef4eb9481badde2a775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
