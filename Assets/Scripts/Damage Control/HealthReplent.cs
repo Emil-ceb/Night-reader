@@ -1,3 +1,9 @@
+/*
+Nombre del desarrollador: Emilio Ceballos Castro
+Asignatura: Programación Orientada a Objetos
+Fuente en la que se basa el scripts: Canal de Youtube Pandemonium games
+Descripción general: Script para el uso de items que regeneral la vida del usuario
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

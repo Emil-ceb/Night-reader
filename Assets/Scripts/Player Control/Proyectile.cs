@@ -1,3 +1,10 @@
+/*
+Nombre del desarrollador: Emilio Ceballos Castro
+Asignatura: Programación Orientada a Objetos
+Fuente en la que se basa el scripts: Canal de Youtube Pandemonium games
+Descripción general: Este script se usa para controlar y desactivar las propiedades de los 
+proyectiles usados 
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

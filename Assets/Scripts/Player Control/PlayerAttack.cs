@@ -1,3 +1,10 @@
+/*
+Nombre del desarrollador: Emilio Ceballos Castro
+Asignatura: Programación Orientada a Objetos
+Fuente en la que se basa el scripts: Canal de Youtube Pandemonium games
+Descripción general: Script usado para manejar los ataques y sus animaciones del personaje
+al igual que almacenar los proyectiles en caso de que el personaje los use
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +16,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject[] energy;
     private Animator anim;
     private PlayerMovement pMove;
+    //El mathf.infinity es usado para generar un numero infinito para que cooldownTimer
+    //siempre sea mayor que attckCooldown
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake() 
@@ -19,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.Z) && cooldownTimer > attackCooldown && pMove.canAttack())
+        if(Input.GetKeyDown(KeyCode.C) && cooldownTimer > attackCooldown && pMove.canAttack())
         {
             Attack();
         }
@@ -28,10 +37,10 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        anim.SetTrigger("Attack");
+        anim.SetTrigger("Energy");
         cooldownTimer = 0;
         
-        //un object pooling se usa para multiples objetos 
+        //un object pooling se usa para multiples objetos reciclandolos sin tiempo muerto entre usos
         //energy[FindEnergy()].transform.position = energyPoint.position;
         energy[FindEnergy()].GetComponent<Proyectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }

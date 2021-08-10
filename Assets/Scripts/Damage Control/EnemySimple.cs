@@ -1,3 +1,10 @@
+/*
+Nombre del desarrollador: Emilio Ceballos Castro
+Asignatura: Programación Orientada a Objetos
+Fuente en la que se basa el scripts: Canal de Youtube Pandemonium games
+Descripción general: Este script es usado para enemigos y trampas basicas que no requieren de mucho 
+pensamiento ni movimiento, es decir unicamente se mueven de una direccion a otra
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +20,7 @@ public class EnemySimple : MonoBehaviour
 
     private void Awake() 
     {
+        //Scripts basicos para registrar cuando ve a la derecha o izquierda
         leftSide = transform.position.x - movementDistance;
         rightSide = transform.position.x + movementDistance;
     }
@@ -23,7 +31,8 @@ public class EnemySimple : MonoBehaviour
         {
             if(transform.position.x > leftSide)
             {
-                 transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.localScale=new Vector3(-1,1,1);
             }
             else
             {
@@ -35,6 +44,7 @@ public class EnemySimple : MonoBehaviour
             if(transform.position.x < rightSide)
             {
                 transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.localScale=Vector3.one;
             }
             else
             {

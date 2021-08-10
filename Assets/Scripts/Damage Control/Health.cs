@@ -1,3 +1,10 @@
+/*
+Nombre del desarrollador: Emilio Ceballos Castro
+Asignatura: Programación Orientada a Objetos
+Fuente en la que se basa el scripts: Canal de Youtube Pandemonium games
+Descripción general: Script creado para manejar y controlar la vida del personaje 
+al igual que sus animaciones pertinentes de daño y muerte
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
