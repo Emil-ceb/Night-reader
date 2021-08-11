@@ -44,6 +44,14 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("Run",horizontalInput!=0);
         anim.SetBool("Grounded", isGrounded());
 
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            anim.SetBool("Crouch",true);
+        }else
+        {
+            anim.SetBool("Crouch",false);
+        }
+
         //Codigo para generar el wall jump
         if (wallJumpCooldown > 0.2f)
         {
@@ -74,8 +82,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     private void Jump()
     {
+        //Esta variable es usada para que detecte cuando este en el piso con una etiqueta en el piso
         if(isGrounded())
         {
          body.velocity=new Vector2(body.velocity.x, jumpForce);

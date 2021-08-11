@@ -30,19 +30,37 @@ public class PlayerAttack : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.C) && cooldownTimer > attackCooldown && pMove.canAttack())
         {
-            Attack();
+            attackEnergy();
         }
         cooldownTimer += Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            attackHeavy();
+        }
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            attackLight();
+        }
     }
 
-    private void Attack()
+    private void attackEnergy()
     {
         anim.SetTrigger("Energy");
         cooldownTimer = 0;
         
         //un object pooling se usa para multiples objetos reciclandolos sin tiempo muerto entre usos
         //energy[FindEnergy()].transform.position = energyPoint.position;
-        energy[FindEnergy()].GetComponent<Proyectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        //energy[FindEnergy()].GetComponent<Proyectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
+
+    private void attackHeavy()
+    {
+        anim.SetTrigger("AttackHeavy");
+    }
+    private void attackLight()
+    {
+        anim.SetTrigger("AttackLight");
     }
 
     private int FindEnergy()
