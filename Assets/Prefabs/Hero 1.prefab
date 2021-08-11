@@ -205,7 +205,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   speed: 8
-  jumpForce: 12
+  jumpForce: 14
 --- !u!114 &1396437864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,3 +259,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  iFrameDuration: 0.5
+  numberOffFlashes: 4
