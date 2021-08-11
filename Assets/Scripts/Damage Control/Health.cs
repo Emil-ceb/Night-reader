@@ -11,15 +11,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [Header("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth {get; private set;}
     private Animator anim;
     private bool dead;
 
+    [Header("iFrames")]
+    [SerializeField]private float iFrameDuration;
+    [SerializeField]private int numberOffFlashes;
+    private SpriteRenderer spriteRend;
+
     private void Awake() 
     {
         currentHealth = startingHealth;   
         anim = GetComponent<Animator>();
+        spriteRend = GetComponent<SpriteRenderer>();
     }
 
     public void TakeDamage(float _damage)
@@ -29,6 +36,9 @@ public class Health : MonoBehaviour
         if (currentHealth > 0)
         {
             anim.SetTrigger("Hurt");
+            //Se usa un StartCorutine para que se pause la lectura hasta que se cumpla la condicion 
+            //en este caso la de invulnerabilidad
+            StartCoroutine(Invulnerability());
         }
         else
         {
@@ -44,5 +54,21 @@ public class Health : MonoBehaviour
     public void addHealth(float _value)
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+    }
+
+    private IEnumerator Invulnerability()
+    {
+        //Esta variable se esta usando para que el personaje tenga un para de segundo de invulnerabilidad
+        //al chocar con un enemigo, esto usando Layers y una representacion visual
+        Physics2D.IgnoreLayerCollision(8,9,true);
+        //Duracion de la invulnarabilidad
+        for (int i = 0; i < numberOffFlashes; i++)
+        {
+            spriteRend.color = new Color(1,0,0,0.5f);
+            yield return new WaitForSeconds(iFrameDuration / (numberOffFlashes) * 2);
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFrameDuration / (numberOffFlashes) * 2);
+        }
+        Physics2D.IgnoreLayerCollision(8,9,false);
     }
 }

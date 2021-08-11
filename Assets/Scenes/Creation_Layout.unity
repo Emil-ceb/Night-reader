@@ -1131,11 +1131,11 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1531191911}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1531191911}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 3.3
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1981,7 +1981,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2362,6 +2362,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 691375904, guid: 170d64d4cf7b5b942af797b2211cce2d, type: 3}
+      propertyPath: iFrameDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 691375904, guid: 170d64d4cf7b5b942af797b2211cce2d, type: 3}
+      propertyPath: numberOffFlashes
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 958100833, guid: 170d64d4cf7b5b942af797b2211cce2d, type: 3}
       propertyPath: energy.Array.data[0]
       value: 
@@ -2402,6 +2410,10 @@ PrefabInstance:
       propertyPath: energy.Array.data[9]
       value: 
       objectReference: {fileID: 254498157}
+    - target: {fileID: 1872409410, guid: 170d64d4cf7b5b942af797b2211cce2d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1508534294222315042, guid: 170d64d4cf7b5b942af797b2211cce2d,
         type: 3}
       propertyPath: m_Name
@@ -2409,8 +2421,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1508534294222315042, guid: 170d64d4cf7b5b942af797b2211cce2d,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1508534294222315055, guid: 170d64d4cf7b5b942af797b2211cce2d,
         type: 3}
@@ -2937,6 +2949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719003980824450114, guid: 9046b197299e26b41b8fbf1b6eaf2d6c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6719003980824450174, guid: 9046b197299e26b41b8fbf1b6eaf2d6c,
         type: 3}
