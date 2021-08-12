@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Energy
+  - Weapon
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class AIBasic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Vector3 startingPos;
+    private void Start()
     {
-        
+        startingPos=transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private Vector3 GetRoamingPosition()
     {
-        
+        return startingPos + GetRandomDir()*Random.Range(10f,10f);
+    } 
+    
+    //Direccion al azar
+    public static Vector3 GetRandomDir()
+    {
+        return new Vector3(UnityEngine.Random.Range(-1f,1f),UnityEngine.Random.Range(-1f,1f)).normalized;
     }
 }

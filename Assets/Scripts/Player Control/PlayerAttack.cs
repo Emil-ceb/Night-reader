@@ -12,6 +12,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
+    [SerializeField] private float damage;
     [SerializeField] private Transform energyPoint;
     [SerializeField] private GameObject[] energy;
     private Animator anim;
